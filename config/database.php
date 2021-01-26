@@ -35,6 +35,21 @@ return [
 
     'connections' => [
 
+        'eolinker' => [
+            'driver' => 'mysql',
+            'host' => env('DB_EOLINKER_HOST'),
+            'port' => env('DB_EOLINKER_PORT', '3306'),
+            'database' => env('DB_EOLINKER_DATABASE', 'eolikner_os'),
+            'username' => env('DB_EOLINKER_USERNAME'),
+            'password' => env('DB_EOLINKER_PASSWORD'),
+            'unix_socket' => env('DB_EOLINKER_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_general_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ],
+
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
